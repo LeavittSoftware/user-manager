@@ -1,9 +1,10 @@
-declare type Constructable = new (...args: any[]) => object;
-export interface AuthenticatedTokenBehaviorConstructor {
-    new (...args: any[]): AuthenticatedTokenBehavior;
+import { ElementMixin } from '@polymer/polymer/lib/mixins/element-mixin';
+declare type Constructable = new (...args: any[]) => ElementMixin;
+export interface AuthenticatedTokenMixinConstructor {
+    new (...args: any[]): AuthenticatedTokenMixin;
 }
-export interface AuthenticatedTokenBehavior {
+export interface AuthenticatedTokenMixin {
     _getAccessTokenAsync(): Promise<string>;
 }
-export declare const authenticatedTokenMixin: <T extends Constructable>(superClass: T) => T & AuthenticatedTokenBehaviorConstructor;
+export declare const authenticatedTokenMixin: <T extends Constructable>(superClass: T) => T & AuthenticatedTokenMixinConstructor;
 export {};

@@ -8,7 +8,9 @@ import '@polymer/paper-input/paper-input';
 import '@polymer/paper-button/paper-button';
 import '@polymer/paper-styles/paper-styles';
 import '@leavittsoftware/lss-user-manager/lib/lss-user-manager';
-import './authenticated-token-behavior-demo';
+import './authenticated-token-mixin-demo';
+import './authenticated-person-mixin-demo';
+import './authenticated-roles-mixin-demo';
 import { customElement, property, query } from '@polymer/decorators';
 import { html, PolymerElement } from '@polymer/polymer/polymer-element';
 let UserManagerDemo = class UserManagerDemo extends PolymerElement {
@@ -66,11 +68,11 @@ let UserManagerDemo = class UserManagerDemo extends PolymerElement {
             </template>
         </ol>
         <hr/>
-        <authenticated-token-behavior-demo></authenticated-token-behavior-demo>
+        <authenticated-token-mixin-demo></authenticated-token-mixin-demo>
         <hr/>
-        <authenticated-roles-behavior-demo></authenticated-roles-behavior-demo>
+        <authenticated-roles-mixin-demo></authenticated-roles-mixin-demo>
         <hr/>
-        <authenticated-person-behavior-demo></authenticated-person-behavior-demo>
+        <authenticated-person-mixin-demo></authenticated-person-mixin-demo>
     </template>
 
 </dom-module>`;
